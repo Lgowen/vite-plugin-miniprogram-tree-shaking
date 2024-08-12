@@ -1,0 +1,60 @@
+{
+  "name": "vite-plugin-miniprogram-tree-shaking",
+  "version": "0.0.1",
+  "description": "用于跨平台小程序框架使用原生小程序组件库时的tree-shaking",
+  "scripts": {
+    "dev": "npm run build -- --watch ./src",
+    "lint": "eslint ./src --ext .js,.ts",
+    "build": "tsup",
+    "prepublishOnly": "npm run build",
+    "release": "standard-version"
+  },
+  "author": "Lgowen",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "miniprogram",
+    "vite-plugin",
+    "tree-shaking",
+    "uniapp",
+    "taro"
+  ],
+  "homepage": "https://github.com/Lgowen/vite-plugin-miniprogram-tree-shaking",
+  "repository": "git+https://github.com:Lgowen/vite-plugin-miniprogram-tree-shaking.git",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^22.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "standard-version": "^9.5.0",
+    "tsup": "^8.2.4",
+    "typescript": "^4.9.5",
+    "vite": "^4.0.3"
+  },
+  "peerDependencies": {
+    "vite": ">=4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
