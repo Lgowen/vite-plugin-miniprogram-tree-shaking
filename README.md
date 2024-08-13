@@ -46,54 +46,16 @@ export default defineConfig(({ mode }) => {
 
 ## Options
 
-### `include`
-
-- Type: `string | string[]`
-
-包括要匹配的路径(必填)
-
-### `exclude`
-
-- Type: `string | string[]`
-
-包括不匹配的路径
-
-### `componentsPlatform`
-
-- Type: `keyof typeof Platform`
-
-使用原生小程序组件库的平台(必填)
-
-### `componentsPrefix`
-
-- Type: `string`
-
-要处理的小程序组件库前缀(必填,需要统一格式), 例如 pages.json中 要处理的小程序组件库前缀 例如 <ant-button> 中的 ant 默认使用 '-' 拼接
-
-### `componentsPath`
-
-- Type: `string`
-
-要处理的小程序组件库路径(必填)
-
-### `excludeComponents`
-
-- Type: `string[]`
-
-排除的组件或文件夹(必填), 例如 `['style', 'mixins', 'tsxml']`
-
-### `miniprogramComponentsPath`
-
-- Type: `string`
-
-要处理的小程序组件库根路径,有需要在CI上执行npm安装依赖的情况下填写
-
-### `npm`
-
-- Type: `boolean`
-- Default: `false`
-
-原生小程序组件库是否采用npm的方式, 如果该值设置为true时 miniprogramComponentsPath 为必填
+| 选项名 |   值    | 默认值 | 是否必填 |                      说明                      |
+| ------ | :-----: | :----: | :------: | :--------------------------------------------: |
+| include | string 、 string[] |  <空>  |    否    | 指定插件所要搜寻的目录(用于查找所有使用到的原生小程序组件) |
+| exclude  | string 、 string[]  |  <空>  |    否    |     指定插件不搜寻的目录    |
+| componentsPlatform  | keyof typeof Platform  |  <空>  |    是    |     使用原生小程序组件库的平台(必填)    |
+| componentsPrefix  | string  |  <空>  |    是    |     要处理的小程序组件库前缀(必填,需要统一格式), 例如 pages.json中 要处理的小程序组件库前缀 例如 <ant-button> 中的 ant 默认使用 '-' 拼接    |
+| componentsPath  | string  |  <空>  |    是    |     要处理的小程序组件库路径(必填)   |
+| excludeComponents  | string[]  |  <空>  |    否    |     排除的组件或文件夹(必填), 例如 `['style','mixins', 'tsxml']`   |
+| miniprogramComponentsPath  | string  |  <空>  |    否    |     要处理的小程序组件库根路径,有需要在CI上执行npm安装依赖的情况下填写    |
+| npm  | boolean  |  false  |    否    |     原生小程序组件库是否采用npm的方式, 如果该值设置为true时 miniprogramComponentsPath 为必填    |
 
 
 ## Example
