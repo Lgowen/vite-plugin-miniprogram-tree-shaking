@@ -95,6 +95,13 @@ export default defineConfig(({ mode }) => {
 
 原生小程序组件库是否采用npm的方式, 如果该值设置为true时 miniprogramComponentsPath 为必填
 
+
+## Example
+
+可以参考 [example](https://github.com/Lgowen/vite-plugin-miniprogram-tree-shaking/tree/main/example) 中的示例
+例子中是使用 `uniapp` 作为小程序跨平台框架使用支付宝原生小程序 `antd-mini` 时的Tree Shaking插件
+
+
 ## License
 
 MIT
